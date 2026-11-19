@@ -1,0 +1,61 @@
+/* Compass editor panel — Prasat Digital look inside the WordPress editor. */
+.compass-mb { --c-indigo: #4f46e5; --c-ink: #1c1917; --c-text: #44403c; --c-muted: #6b6560; --c-line: #e7e5e4; --c-soft: #f5f5f4; --c-ok: #0f766e; --c-warn: #b45309; --c-bad: #b91c1c; color: var(--c-text); font-size: 13px; }
+.compass-mb [hidden] { display: none !important; }
+.compass-mb__tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 14px; }
+.compass-mb__tabs button { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border: 1px solid var(--c-line); border-radius: 6px; background: #fff; color: var(--c-text); font-weight: 600; font-size: 13px; cursor: pointer; }
+.compass-mb__tabs button:hover { border-color: #d6d3d1; color: var(--c-ink); }
+.compass-mb__tabs button.is-active { background: #0c1d3f; border-color: #0c1d3f; color: #fff; }
+.compass-mb__tabs button:focus-visible { outline: 2px solid var(--c-indigo); outline-offset: 2px; }
+.compass-mb__dot { width: 8px; height: 8px; border-radius: 50%; background: #d6d3d1; }
+.compass-mb__dot.is-good { background: var(--c-ok); }
+.compass-mb__dot.is-ok { background: var(--c-warn); }
+.compass-mb__dot.is-poor { background: var(--c-bad); }
+
+.compass-serp { border: 1px solid var(--c-line); border-radius: 10px; padding: 14px 16px; background: #fff; margin-bottom: 16px; font-family: Arial, sans-serif; max-width: 640px; }
+.compass-serp__site { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.compass-serp__site strong { display: block; font-size: 14px; font-weight: 400; color: #202124; line-height: 1.2; }
+.compass-serp__fav { width: 26px; height: 26px; border-radius: 50%; background: #f1f3f4; display: grid; place-items: center; font-size: 12px; color: #5f6368; flex: none; }
+.compass-serp__url { display: block; font-size: 12px; color: #4d5156; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 520px; }
+.compass-serp__title { font-size: 20px; line-height: 1.3; color: #1a0dab; margin: 2px 0 3px; overflow-wrap: anywhere; }
+.compass-serp__desc { font-size: 14px; line-height: 1.58; color: #4d5156; overflow-wrap: anywhere; }
+
+.compass-mb__field { display: grid; gap: 5px; margin: 0 0 14px; max-width: 680px; }
+.compass-mb__field label { display: flex; justify-content: space-between; gap: 10px; font-weight: 600; color: var(--c-ink); }
+.compass-mb__field input[type="text"], .compass-mb__field input[type="url"], .compass-mb__field textarea { width: 100%; min-height: 34px; padding: 6px 10px; border: 1px solid #d6d3d1; border-radius: 6px; font-size: 14px; box-shadow: none; }
+.compass-mb__field input:focus, .compass-mb__field textarea:focus { border-color: var(--c-indigo); box-shadow: 0 0 0 3px rgba(79, 70, 229, .2); outline: none; }
+.compass-mb__count { font-weight: 400; color: var(--c-muted); font-size: 12px; }
+.compass-mb__meter { display: block; height: 4px; border-radius: 999px; background: var(--c-soft); overflow: hidden; }
+.compass-mb__meter span { display: block; height: 100%; width: 0; border-radius: 999px; background: #d6d3d1; transition: width .2s; }
+.compass-mb__meter span.is-good { background: var(--c-ok); }
+.compass-mb__meter span.is-ok { background: var(--c-warn); }
+.compass-mb__meter span.is-poor { background: var(--c-bad); }
+.compass-mb__help { color: var(--c-muted); font-size: 12px; display: block; }
+.compass-mb__row { display: flex; gap: 6px; }
+.compass-mb__row input { flex: 1; }
+.compass-mb .button { border-radius: 6px; }
+.compass-mb__check { margin: 0 0 12px; }
+.compass-mb__check label { display: inline-flex; gap: 8px; align-items: center; font-weight: 600; color: var(--c-ink); }
+.compass-mb__note { background: #fffbeb; border: 1px solid #fde68a; color: #b45309; border-radius: 10px; padding: 8px 12px; }
+
+.compass-mb__h { display: flex; align-items: center; gap: 8px; margin: 18px 0 8px; font-size: 11px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--c-muted); }
+.compass-mb__score { display: inline-block; padding: 1px 7px; border-radius: 4px; font-size: 11px; letter-spacing: 0; text-transform: none; background: var(--c-soft); color: var(--c-text); }
+.compass-mb__score.is-good { background: #f0fdfa; color: var(--c-ok); }
+.compass-mb__score.is-ok { background: #fffbeb; color: #b45309; }
+.compass-mb__score.is-poor { background: #fef2f2; color: var(--c-bad); }
+.compass-checks { margin: 0; list-style: none; display: grid; gap: 6px; }
+.compass-checks li { position: relative; margin: 0; padding-left: 20px; line-height: 1.45; }
+.compass-checks li::before { content: ''; position: absolute; left: 2px; top: .4em; width: 9px; height: 9px; border-radius: 50%; background: #d6d3d1; }
+.compass-checks li.is-good::before { background: var(--c-ok); }
+.compass-checks li.is-ok::before { background: var(--c-warn); }
+.compass-checks li.is-poor::before { background: var(--c-bad); }
+.compass-checks li.is-hint { color: var(--c-muted); font-style: italic; }
+.compass-checks li.is-hint::before { display: none; }
+
+.compass-card { max-width: 520px; border: 1px solid var(--c-line); border-radius: 10px; overflow: hidden; background: #fff; margin-bottom: 6px; }
+.compass-card__img { aspect-ratio: 1.91 / 1; background: var(--c-soft) center / cover no-repeat; display: grid; place-items: center; color: var(--c-muted); font-size: 12px; text-align: center; padding: 0 20px; }
+.compass-card__img.has-img span { display: none; }
+.compass-card__body { display: grid; gap: 2px; padding: 10px 12px; border-top: 1px solid var(--c-line); background: #fafaf9; }
+.compass-card__host { font-size: 11px; text-transform: uppercase; color: var(--c-muted); }
+.compass-card__body strong { color: var(--c-ink); font-size: 15px; }
+.compass-card__body span:last-child { color: var(--c-muted); }
+@media (prefers-reduced-motion: reduce) { .compass-mb__meter span { transition: none; } }
