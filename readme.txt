@@ -3,7 +3,7 @@ Tags: seo, schema, sitemap, redirects, open graph
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,11 @@ At /wp-sitemap.xml (also reachable as /sitemap.xml). Submit it in Google Search 
 * Interface fonts: Inter (The Inter Project Authors) and Noto Sans Khmer (Google), SIL Open Font License 1.1, bundled in assets/fonts.
 
 == Changelog ==
+
+= 1.0.7 =
+* New: the Prasat Digital overview is now a full dashboard: website health with a severity breakdown, "What to fix first", live tiles for every plugin, recent activity, 7-day charts and the Smart AI Optimize (Premium) card.
+* New: Prasat temple loading animations for checks, scans, backups and every progress bar.
+* New: page descriptions, sitemap and Google verification appear on the Prasat Digital dashboard.
 
 = 1.0.6 =
 * New: updates now come from the plugin's GitHub releases (github.com/thhyarith-prog), with the normal one-click "Update now" and automatic updates.

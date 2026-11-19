@@ -3,7 +3,7 @@
  * Plugin Name:       Compass
  * Plugin URI:        https://www.prasatdigital.com
  * Description:       Search visibility made clear: titles and descriptions with a live Google preview, SEO checks (Khmer-aware), social cards, schema for businesses and articles, XML sitemap, redirects, a 404 monitor, IndexNow and breadcrumbs.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Update URI:        https://github.com/thhyarith-prog/compass
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'COMPASS_VERSION', '1.0.6' );
+define( 'COMPASS_VERSION', '1.0.7' );
 define( 'COMPASS_FILE', __FILE__ );
 define( 'COMPASS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'COMPASS_URL', plugin_dir_url( __FILE__ ) );
@@ -34,7 +34,7 @@ unset( $compass_file );
 if ( is_admin() ) {
 	require_once COMPASS_DIR . 'includes/class-compass-admin.php';
 	require_once COMPASS_DIR . 'includes/prasat-hub.php';
-	Prasat_Hub::register( 'compass', array( 'assets' => COMPASS_URL . 'assets/', 'health' => array( 'Compass_Admin', 'health' ) ) );
+	Prasat_Hub::register( 'compass', array( 'assets' => COMPASS_URL . 'assets/', 'health' => array( 'Compass_Admin', 'health' ), 'dashboard' => array( 'Compass_Admin', 'dashboard' ) ) );
 }
 
 final class Compass {

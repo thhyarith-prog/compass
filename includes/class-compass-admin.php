@@ -327,4 +327,24 @@ class Compass_Admin {
 		}
 		return $out;
 	}
+
+	/** Numbers for the Prasat Digital dashboard (Prasat_Hub::render). */
+	public static function dashboard() {
+		list( $total, , $no_desc ) = self::content_stats();
+		$s        = Compass_Settings::all();
+		$verified = '' !== $s['verify_google'];
+		$hidden   = ! get_option( 'blog_public' );
+		return array(
+			'tiles' => array(
+				array(
+					'area'  => __( 'Search', 'compass' ),
+					'value' => $hidden ? __( 'Hidden', 'compass' ) : ( $total - $no_desc ) . '/' . $total,
+					'label' => $hidden ? __( 'from search engines', 'compass' ) : __( 'pages with a description', 'compass' ),
+					'sub'   => ( $s['sitemap'] ? __( 'Sitemap on', 'compass' ) : __( 'Sitemap off', 'compass' ) ) . ' · ' . ( $verified ? __( 'Google verified', 'compass' ) : __( 'Google not verified', 'compass' ) ),
+					'tone'  => $hidden || Compass::conflict() ? 'bad' : ( ! $verified || ( $total && $no_desc / $total > 0.5 ) ? 'warn' : 'ok' ),
+					'url'   => admin_url( 'admin.php?page=compass' ),
+				),
+			),
+		);
+	}
 }
