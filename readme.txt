@@ -3,7 +3,7 @@ Tags: seo, schema, sitemap, redirects, open graph
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ At /wp-sitemap.xml (also reachable as /sitemap.xml). Submit it in Google Search 
 * Interface fonts: Inter (The Inter Project Authors) and Noto Sans Khmer (Google), SIL Open Font License 1.1, bundled in assets/fonts.
 
 == Changelog ==
+
+= 1.0.6 =
+* New: updates now come from the plugin's GitHub releases (github.com/thhyarith-prog), with the normal one-click "Update now" and automatic updates.
 
 = 1.0.5 =
 * Fix: declares "Update URI", so WordPress never offers an unrelated WordPress.org plugin with the same folder name as an update for this one.

@@ -4,7 +4,7 @@
 
 <p align="center">Search visibility made clear: titles and descriptions with a live Google preview, SEO checks, social cards, business schema, sitemap, redirects and a 404 monitor.</p>
 
-<p align="center">Version 1.0.5 · WordPress 6.0+ · PHP 7.4+ · GPL-2.0-or-later · by <a href="https://www.prasatdigital.com">Prasat Digital</a></p>
+<p align="center">Version 1.0.6 · WordPress 6.0+ · PHP 7.4+ · GPL-2.0-or-later · by <a href="https://www.prasatdigital.com">Prasat Digital</a></p>
 
 ---
 
