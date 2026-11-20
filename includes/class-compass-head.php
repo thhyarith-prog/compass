@@ -18,7 +18,7 @@ class Compass_Head {
 	}
 
 	public static function title( $title ) {
-		if ( is_feed() || is_admin() ) {
+		if ( is_feed() || is_admin() || empty( $GLOBALS['wp_query'] ) || ! did_action( 'wp' ) ) {
 			return $title;
 		}
 		$c = Compass_Context::current();
@@ -26,6 +26,9 @@ class Compass_Head {
 	}
 
 	public static function robots( $robots ) {
+		if ( empty( $GLOBALS['wp_query'] ) || ! did_action( 'wp' ) ) {
+			return $robots; // e.g. an error page printed before WordPress parsed the request
+		}
 		$c = Compass_Context::current();
 		if ( $c['noindex'] ) {
 			$robots['noindex'] = true;
