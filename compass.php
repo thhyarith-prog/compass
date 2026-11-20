@@ -3,7 +3,7 @@
  * Plugin Name:       Compass
  * Plugin URI:        https://www.prasatdigital.com
  * Description:       Search visibility made clear: titles and descriptions with a live Google preview, SEO checks (Khmer-aware), social cards, schema for businesses and articles, XML sitemap, redirects, a 404 monitor, IndexNow and breadcrumbs.
- * Version:           1.0.9
+ * Version:           1.0.10
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Update URI:        https://github.com/thhyarith-prog/compass
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'COMPASS_VERSION', '1.0.9' );
+define( 'COMPASS_VERSION', '1.0.10' );
 define( 'COMPASS_FILE', __FILE__ );
 define( 'COMPASS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'COMPASS_URL', plugin_dir_url( __FILE__ ) );

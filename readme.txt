@@ -3,7 +3,7 @@ Tags: seo, schema, sitemap, redirects, open graph
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ At /wp-sitemap.xml (also reachable as /sitemap.xml). Submit it in Google Search 
 * Interface fonts: Inter (The Inter Project Authors) and Noto Sans Khmer (Google), SIL Open Font License 1.1, bundled in assets/fonts.
 
 == Changelog ==
+
+= 1.0.10 =
+* New: "Optimize with AI" now fixes what is safe to fix, not just lists it. It backs up first with Lifeboat, makes the safe fixes, shows each change under "Fixed for you" with an Undo button, then the AI writes a plan for what is left.
 
 = 1.0.9 =
 * Fixed: Compass no longer adds a second error on top of the WordPress error page when another plugin or theme has a fatal error.
